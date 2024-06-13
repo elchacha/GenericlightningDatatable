@@ -1,0 +1,13 @@
+<template>
+    <span class="clickable slds-p-horizontal_xx-small slds-grid slds-grid_vertical-align-center" onclick={callAction}>
+        <span class="detailText">{info.text}</span>
+        <template lwc:if={info.text}>
+            <div class="slds-p-left_large">
+                <lightning-icon icon-name={info.iconName} size='xx-small' style={css}> </lightning-icon>
+            </div>
+        </template>
+        <template lwc:else>
+            <lightning-icon icon-name={info.iconName} size='xx-small' style={css}> </lightning-icon>
+        </template>
+    </span>
+</template>
