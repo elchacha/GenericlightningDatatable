@@ -87,7 +87,8 @@ export default class DggnTableUsage extends NavigationMixin(LightningElement) {
     // screenFlowName : Api name of the screen flow to launch in modal view
     async  callAction(info){
         const result = await tableScreenFlowModal.open({
-            size: 'small',
+            // small,medium,large,full : choose one option
+            size: 'full',
             description: 'Accessible description of modal\'s purpose',
             content: {title : 'test Title', screenFlowName : 'screenFlowTest' , inputVariables : [{name: 'iVariable1',type: 'String',value: info}]}
         });
