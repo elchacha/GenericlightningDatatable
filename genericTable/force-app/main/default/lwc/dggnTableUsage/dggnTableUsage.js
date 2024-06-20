@@ -82,7 +82,6 @@ export default class DggnTableUsage extends NavigationMixin(LightningElement) {
         methods that will be used when a specific event is triggered by a custom cell
     */
 
-    value;          
     // async : we will launch a screenflow through a modal, we need to wait for the result
     // screenFlowName : Api name of the screen flow to launch in modal view
     async  callAction(info){
@@ -108,12 +107,10 @@ export default class DggnTableUsage extends NavigationMixin(LightningElement) {
 
 
     callCbSelection(event){
-        console.log('selection ??');
         this.displayActionCliked('cbselection');
     }
 
     callMultiIcon(event){
-        console.log('icon : '+JSON.stringify(event));
         this.displayActionCliked('multiiconevent1');
     }
     callDetail1(event){
@@ -121,10 +118,14 @@ export default class DggnTableUsage extends NavigationMixin(LightningElement) {
     }
 
 
+    /*
+        Only use to demonstrate that the event was properly handled by the parents
+    */
+
     displayActionCliked(action){
         const evt = new ShowToastEvent({
-            title: 'action reçu',
-            message: 'action '+action+' a été cliqué',
+            title: 'event action detected',
+            message: 'action '+action+' was clicked',
             variant: 'success',
           });
         this.dispatchEvent(evt);
