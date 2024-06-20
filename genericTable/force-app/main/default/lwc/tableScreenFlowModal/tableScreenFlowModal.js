@@ -12,6 +12,10 @@ export default class TableScreenFlowModal extends LightningModal {
     return this.content.screenFlowName;
   }
 
+  get title(){
+    return this.content.title;
+  }
+
 
   // cette methodé renverra à l'appelant les variables "output" du screenflow
   handleStatusChange(event) {

@@ -1,6 +1,6 @@
 <template>
     new template 
-    <lightning-modal-header label="New Account"></lightning-modal-header>
+    <lightning-modal-header label={title}></lightning-modal-header>
     <lightning-modal-body> 
         <lightning-flow flow-api-name={screenFlowName} flow-input-variables={inputVariables} onstatuschange={handleStatusChange}> </lightning-flow>
     </lightning-modal-body>
