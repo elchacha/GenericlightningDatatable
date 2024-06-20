@@ -50,10 +50,17 @@ export default class DggnTableUsage extends NavigationMixin(LightningElement) {
             this.callDetail1(evt);
         });
 
+        
+
+          
         this._getRecords();
-        // we want to display a table example when loading the lwc.
         this.handleClick2();
     }
+
+
+
+
+
 
     _getRecords(){
         this.isLoading = true;
