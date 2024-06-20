@@ -82,7 +82,7 @@ export default class DggnTableUsage extends NavigationMixin(LightningElement) {
         const result = await tableScreenFlowModal.open({
             size: 'small',
             description: 'Accessible description of modal\'s purpose',
-            content: {screenFlowName : 'screenFlowTest' , inputVariables : [{name: 'iVariable1',type: 'String',value: info}]}
+            content: {title : 'test Title', screenFlowName : 'screenFlowTest' , inputVariables : [{name: 'iVariable1',type: 'String',value: info}]}
         });
         //WARNING :  when retrieving values from the flow, the var name are case sensitive
         this.displayActionCliked(result.flowVariables.ovariable1);
