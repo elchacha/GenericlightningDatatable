@@ -19,14 +19,14 @@ export default class TableScreenFlowModal extends LightningModal {
 
   // cette methodé renverra à l'appelant les variables "output" du screenflow
   handleStatusChange(event) {
-      if (event.detail.status === "FINISHED" || event.detail.status=="FINISHED_SCREEN") {
-        let flowVariables={};
-        if(event.detail&&event.detail.outputVariables){
-          for (const flowVariable of event.detail.outputVariables) {  
-            flowVariables[flowVariable.name]=flowVariable.value;
-          }
+    if (event.detail.status === "FINISHED" || event.detail.status=="FINISHED_SCREEN") {
+      let flowVariables={};
+      if(event.detail&&event.detail.outputVariables){
+        for (const flowVariable of event.detail.outputVariables) {  
+          flowVariables[flowVariable.name]=flowVariable.value;
         }
-        this.close({flowVariables});
+      }
+      this.close({flowVariables});
     }
   }
 }
